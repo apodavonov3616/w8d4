@@ -46,9 +46,16 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
     function outerBubbleSortLoop(madeAnySwaps) {
       // Begin an inner loop if you made any swaps. Otherwise, call
       // `sortCompletionCallback`.
+    
+    if (manyAnySwaps) {
+        innerBubbleSortLoop(arr, 0, false, outerBubbleSortLoop)
+    }else {
+        sortCompletionCallback(arr)
     }
+
   
     // Kick the first outer loop off, starting `madeAnySwaps` as true.
+    outerBubbleSortLoop(true)
   }
   
   absurdBubbleSort([3, 2, 1], function(arr) {
