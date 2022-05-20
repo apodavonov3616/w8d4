@@ -4,11 +4,34 @@ class Board {
     }
 
     won() {
-
+        if (this.winner) {
+            return true
+        }
     }
 
     winner() {
 
+    }
+
+    render() {
+        newGrid = []
+        for (let i=0; i< 3; i++) {
+            smallGrid = []
+            for (let j=0; j<3; j++) {
+                smallGrid.push([])
+            }
+            newGrid.push(smallGrid)
+        }
+        for (let i=0; i< 3: i++) {
+            for (let j=0; j<3; j++) {
+                if (this.grid[i][j]){
+                    newGrid[i][j] = this.grid[i][j]
+                } else {
+                    newGrid[i][j] = " "
+                }
+            }
+        }
+        console.log(newGrid.join(""))
     }
 
     validPos(pos) {
