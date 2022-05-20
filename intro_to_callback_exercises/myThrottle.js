@@ -1,5 +1,5 @@
 Function.prototype.myThrottle = function(interval) {
-    let tooSoon = true;
+    let tooSoon = false;
     if (!tooSoon) {
         tooSoon = true;
         setTimeout(tooSoon(), interval)
@@ -8,4 +8,6 @@ Function.prototype.myThrottle = function(interval) {
 
 }
 
-function helperMethod()
+Function.prototype.myDebounce = function(interval) {
+       
+}
